@@ -29,7 +29,7 @@ JavaScript – Logic, DOM manipulation, and events
 
 
 🎨 Screenshots
-
+![image alt](https://github.com/nabanita003/Quiz_Game/blob/3c51ebc690758434d3b2167e737950255cdcbf9e/Screenshot%202025-08-11%20022734.png)
 
 
 
