@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Quiz App</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Section Selection -->
+     <div id="sectionSelection">
+          <h2>Select Quiz Section</h2>
+          <button data-section="aptitude">Aptitude</button>
+          <button data-section="reasoning">Reasoning</button>
+          <button data-section="english">English</button>
+          <button data-section="technical">Technical</button>
+     </div>
+
+     <div class="quiz-box hidden" id="quizBox">
+          <div class="quiz-container">
+               <h1 id="quizTitle">Quiz App</h1>
+               <div class="quiz-scores">
+                    <div class="timer scoresbox">Time Left: <span id="timeLeft">15</span>s</div>
+                    <div class="score scoresbox" id="score">Score: 0</div>
+               </div>
+               <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+               </div>
+               <div class="question" id="question"></div>
+               <div class="options" id="options"></div>
+               <button id="quitBtn" style="margin-top:10px; color: rgba(0, 0, 0, 0.925);background-color: yellow; ">Quit Quiz</button>               
+
+          </div>
+          <div class="trophy">
+               <img src="images/trophy.png" alt="" />
+          </div>
+          <div class="qna">
+               <img src="images/qna.png" alt="" />
+          </div>
+     </div>
+     <script src="script.js"></script>
+     <!-- <script>
+          function saveScoreToLeaderboard(score, accuracy) {
+  const username = localStorage.getItem('currentUser') || 'Anonymous';
+
+
+  let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+
+  
+  leaderboard.push({ username, score, accuracy });
+
+
+  leaderboard.sort((a, b) => b.score - a.score);
+
+
+  leaderboard = leaderboard.slice(0, 10);
+
+  localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
+}
+
+     </script> -->
+
+     
+
+</body>
+</html>

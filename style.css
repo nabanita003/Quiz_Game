@@ -1,0 +1,271 @@
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: #fbafbe;
+     margin: 0;
+     padding: 0;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column; /* allow vertical stacking */
+}
+
+/* Section Selection Container */
+#sectionSelection {
+     margin-bottom: 20px;
+     text-align: center;
+     /* width: 420px; */
+      width: 90%;
+  max-width: 420px;
+     background: #fff0f3;
+     padding: 1.5em 1em;
+     border-radius: 10px;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#sectionSelection h2 {
+     margin-bottom: 15px;
+     color: orangered;
+     font-weight: 700;
+}
+
+#sectionSelection button {
+     /* width: 180px; */
+     width: 100%;
+     max-width: 300px;
+     font-size: clamp(16px, 4vw, 18px);
+     margin: 5px 10px;
+     padding: 12px 0;
+     font-size: 18px;
+     border: 1px solid orangered;
+     border-radius: 10px;
+     cursor: pointer;
+     background-color: #fff;
+     color: orangered;
+     font-weight: 600;
+     box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+     transition: background-color 0.3s, color 0.3s;
+     display: inline-block;
+}
+
+#sectionSelection button:hover {
+     background-color: orangered;
+     color: #fff;
+}
+
+/* Your existing quiz box styling */
+.quiz-box {
+     /* width: 800px; */
+     width: 95%;
+     max-width: 800px;
+  flex-direction: column; /* stack content vertically on small screens */
+  background-size: cover; 
+     background-image: url('/images/bgimage.jpg');
+     background-repeat: no-repeat;
+     background-position: center;
+     padding: 2em;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.quiz-container {
+     /* width: 400px; */
+      width: 100%;
+  max-width: 400px;
+     padding: 20px;
+     margin: 0 auto;
+}
+
+.quiz-container h1 {
+     text-align: center;
+     color: orangered;
+}
+
+.question {
+     font-size: 18px;
+     margin-bottom: 20px;
+     color: #333;
+}
+
+.options {
+     margin-bottom: 20px;
+}
+
+.quiz-scores {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 20px;
+}
+
+.scoresbox {
+     font-size: 16px;
+     font-weight: 600;
+     border-radius: 20px;
+     padding: 4px 15px;
+     color: #fff;
+}
+
+.timer {
+     border: 1px solid orangered;
+     background-color: orangered;
+}
+
+.score {
+     border: 1px solid blue;
+     background-color: blue;
+}
+
+.options button {
+     width: 100%;
+     max-width: 300px;
+     font-size: clamp(16px, 4vw, 18px);
+     padding: 15px;
+     margin: 5px 0;
+     font-size: 16px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     cursor: pointer;
+     background-color: #f9f9f9;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     transition: background-color 0.3s ease;
+}
+
+.options button:hover {
+     background-color: orangered;
+     color: white;
+}
+
+.options button.correct {
+     background-color: green !important;
+     color: white;
+     border-color: green !important;
+}
+
+.options button.wrong {
+     background-color: red !important;
+     color: white;
+     border-color: red !important;
+}
+
+.progress-bar {
+     width: 100%;
+     background-color: #f0f0f0;
+     height: 15px;
+     border-radius: 20px;
+     margin-bottom: 10px;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .quiz-box {
+    padding: 1em;
+  }
+  
+  .quiz-scores {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .scoresbox {
+    font-size: 14px;
+    padding: 3px 10px;
+  }
+}
+.progress {
+     width: 0%;
+     height: 100%;
+     background-color: green;
+     transition: width 0.3s ease;
+     border-radius: 20px;
+}
+
+.trophy {
+     /* width: 150px; */
+     width: 20%;
+     min-width: 80px;
+     position: absolute;
+     top: 20px;
+     left: 20px;
+}
+
+.qna {
+     /* width: 150px; */
+     width: 20%;
+     min-width: 80px;
+     position: absolute;
+     bottom: 20px;
+     right: 20px;
+}
+
+.trophy img, .qna img { 
+     width: 100%;
+     height: auto;
+}
+.options button .option-number {
+  display: inline-block;
+  width: 20px; /* fixed width */
+  margin-right: 2rem; /* space after number */
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Fade in/out animation */
+.fade-in {
+  animation: fadeIn 0.6s forwards;
+  display: block !important;
+  will-change: opacity, transform;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s forwards;
+  will-change: opacity, transform;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+
+/* Smooth progress bar update */
+.progress {
+  transition: width 0.6s ease-in-out;
+}
+
+/* Button hover scale effect */
+button:hover:not(:disabled) {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Add pointer cursor */
+button {
+  cursor: pointer;
+}
+
+/* Disable pointer events & dim buttons when disabled */
+.options button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Score message styling */
+#options p {
+  font-size: 20px;
+  color: orangered;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
